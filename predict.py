@@ -13,17 +13,8 @@ from keras.layers import Dense, Input, GlobalMaxPooling1D
 from keras.layers import Conv1D, MaxPooling1D, Embedding
 from keras.models import Model
 from keras.initializers import Constant
-import re
-import csv
-import codecs
-import pandas as pd
 import tensorflow as tf
-from nltk.corpus import stopwords
-from nltk.stem import SnowballStemmer
-from string import punctuation
 from cleantext import clean
-from nltk.stem import PorterStemmer
-from nltk.stem import LancasterStemmer
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential, load_model
 

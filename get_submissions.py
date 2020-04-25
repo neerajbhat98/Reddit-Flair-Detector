@@ -2,24 +2,10 @@ import flask
 import praw 
 from praw.models import MoreComments
 from praw.models import Submission
-import pandas as pd
 import requests
 import json
-import csv
-import time
-import datetime
-import os
-import csv
-import codecs
 import numpy as np
 import pandas as pd
-from nltk.corpus import stopwords
-from nltk.stem import SnowballStemmer
-from string import punctuation
-from cleantext import clean
-from nltk.stem import PorterStemmer
-from nltk.stem import LancasterStemmer
-
 
 client_id = 'gLwv0aerGRmt9A'
 client_secret = 'hYQwRYZJVEUgKzJ7jrLIx8RT7ZE'
