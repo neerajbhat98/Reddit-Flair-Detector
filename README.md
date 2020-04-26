@@ -7,3 +7,8 @@ Build a web application which can be used to predict Flare of a r/india post. Ap
 * [Redddit Flair Detector'](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/Reddit%20Flair%20Detector.ipynb) containe the code for data cleaning, model building and training. 
 * [app.py](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/app.py) contains the routing information and template rendering for the app.
 * [Link to App](http://midas-reddit-flair-detector.herokuapp.com/)
+
+## App SnapShots
+![alt text](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/home_page.png)
+![alt ttext](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/result_page.png)
+
