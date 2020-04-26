@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title></title>
+<body style="background-color: black">
+<div class ="container">
+<img src="./static/reddit.jpg" style = "margin-left:  35%; margin-top :1%">
+
+</div>
+<button type="button" onclick="Home()" class="btn btn-sm btn-info" style ="margin-left :48% ; margin-top:-2%">Home</button>
+<div class="card" style="width: 35rem; margin-left : 30% ;background-color: #1A1A1B ; color :white">
+  <div class="card-body" style = "display: inline;">
+    <h5 class="card-title"><span class="badge badge-warning">{{post.subreddit}}</span></h5>
+    <h5 class="card-title" >Posted by <span class="badge badge-light">{{post.author}}</span></h5>
+    <h5 class="card-title" >Predicted Flair <span class="badge badge-info">{{flair}}</span></h5>
+    <h5 class="card-title" >Assigned Flair <span class="badge badge-info">{{post.flair}}</span></h5>
+  </div>
+  
+  <div class="card-body" style="margin-top: -8%">
+    <div>
+      {{post.title}}
+    </div>
+    {{post.content}}
+   
+  </div>
+</div>
+
+</body>
+<script src="{{url_for('static',filename = 'learning_js.js')}}"></script>
+</html>
