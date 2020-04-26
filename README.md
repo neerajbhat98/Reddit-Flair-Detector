@@ -12,3 +12,20 @@ Build a web application which can be used to predict Flare of a r/india post. Ap
 ![alt text](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/home_page.png)
 ![alt ttext](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/result_page.png)
 
+
+## Approach
+* Around 10k reddit posts were scraped using Pushshift API from January 1,2019 to April 25,2020. However due to non-uniform distribution of posts for different flairs, some additional data was scraped from January 1, 2017 to January 1, 2019 for flairs like Food, Sports etc.
+* All the preprocessing and cleaning was done by this Python [Package](https://pypi.org/project/clean-text/).
+* A deep learning model(i.e. LSTM) was trained for 10 epochs on a train-test-split ratio of 90:10.
+* Input features to the model was post.title+ " " + post.body.
+* Pre-trained Glove Embeddings were used during training, but due to the absence of a large of tokens from reddit posts in the Glove Embeddings, the weughts of the Embedding layers was set to trainable=True.
+* A 100-D vector was used to represent tokens. Using 200-D and 300-D lead to overfitting.
+* Trained Model can be dowloaded from [model](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/model.h5). In case, you;re having problems with loading this model in Keras(very likely), I would recommmend to download [weights](https://www.kaggle.com/nbhativp/kernel19d73c0342/output?scriptVersionId=32660830) from my Kaggle repository where you'll also the find the model architecture and then you can easily load this model.
+* [Word_Index](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/word_index.json) contains all the tokens from the scraped corpus and their respective indices used during training.
+
+![alt text](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/architecture.png)
+![alt ttext](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/Training.png)
+![alt ttext](https://github.com/neerajbhat98/Reddit-Flair-Detector/blob/master/Accuracy.png)
+
+
+
