@@ -8,4 +8,4 @@ pandas==1.0.1
 praw==6.5.1
 psaw==0.0.12
 requests==2.22.0
-tensorflow==1.15.0
+tensorflow==2.5.0
